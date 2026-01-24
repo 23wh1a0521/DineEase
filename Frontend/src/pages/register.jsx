@@ -24,6 +24,7 @@ const Register = () => {
       );
       toast.success(data.message);
       setName(""); setEmail(""); setPassword("");
+      sessionStorage.setItem("registrationSuccess", "true");
       navigate("/success"); // Redirect user after successful registration
     } catch (error) {
       toast.error(error.response?.data?.message || "Registration failed");

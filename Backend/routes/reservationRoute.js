@@ -1,9 +1,9 @@
 import express from "express";
-import { sendReservation } from "../controller/reservation.js";
+import { createReservation } from "../controller/reservation.js";
 
 const router = express.Router();
 
-// When a POST request hits "/send", run the sendReservation function
-router.post("/send", sendReservation);
+// Change "/reservation" to "/send"
+router.post("/send", createReservation);
 
 export default router;

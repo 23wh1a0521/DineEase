@@ -1,17 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HeroSection from "../components/HeroSection";
+import Qualities from "../components/Qualities";
+import WhoAreWe from "../components/WhoAreWe";
+import Menu from "../components/Menu";
+import Team from "../components/Team";
 
 const Home = () => {
+  // Check if user is authenticated
+  const isAuthenticated = !!localStorage.getItem("token");
+
   return (
-    <section className="home-section" style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Welcome to DineEase</h1>
-      <p>Manage your restaurant reservations with ease.</p>
-      <div style={{ marginTop: "20px" }}>
-        <Link to="/register">
-          <button style={{ padding: "10px 20px", cursor: "pointer" }}>Get Started / Register</button>
-        </Link>
-      </div>
-    </section>
+    <>
+      <HeroSection />
+      <Qualities />
+      <WhoAreWe />
+      <Menu />
+      <Team />
+
+      {/* Conditional CTA Section */}
+      <section className="reservation-cta" style={{ padding: "50px", textAlign: "center" }}>
+        {isAuthenticated ? (
+          <div>
+            <h3>Ready to join us?</h3>
+            <Link to="/reservation" className="btn">Book a Table Now</Link>
+          </div>
+        ) : (
+          <div>
+            <h3>Want to book a table?</h3>
+            <p>
+              Please <Link to="/login" style={{ color: "#fb607f", fontWeight: "bold" }}>Login</Link> or 
+              <Link to="/register" style={{ color: "#fb607f", fontWeight: "bold" }}> Register</Link> to make a reservation.
+            </p>
+          </div>
+        )}
+      </section>
+    </>
   );
 };
 

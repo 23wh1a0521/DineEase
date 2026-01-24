@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "ourQualities": [
+        {
+          "id": 1,
+          "image": "qualityFood",
+          "title": "QUALITY FOOD",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "id": 2,
+          "image": "superTaste",
+          "title": "SUPER TASTE",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "id": 3,
+          "image": "fastDelivery",
+          "title": "FAST DELIVERY",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        }
+      ],
+
+      "dishes": [
+        {
+          "id": 1,
+          "image": "breakfast1",
+          "title": "UPMA",
+          "category": "Breakfast"
+        },
+        {
+          "id": 2,
+          "image": "breakfast2",
+          "title": "DOSA",
+          "category": "Breakfast"
+        },
+        {
+          "id": 3,
+          "image": "breakfast3",
+          "title": "IDLY VADA",
+          "category": "Breakfast"
+        },
+        {
+          "id": 4,
+          "image": "breakfast4",
+          "title": "PURI",
+          "category": "Breakfast"
+        },
+
+        {
+          "id": 5,
+          "image": "lunch1",
+          "title": "VEG MEAL",
+          "category": "Lunch"
+        },
+        {
+          "id": 6,
+          "image": "lunch2",
+          "title": "VEG FRIED RICE",
+          "category": "Lunch"
+        },
+        {
+          "id": 7,
+          "image": "lunch3",
+          "title": "CURD RICE",
+          "category": "Lunch"
+        },
+        {
+          "id": 8,
+          "image": "lunch4",
+          "title": "CHAPATHI KURMA",
+          "category": "Lunch"
+        },
+
+        {
+          "id": 9,
+          "image": "ChocolateMilkshake",
+          "title": "CHOCOLATE MILKSHAKE",
+          "category": "Drinks"
+        },
+        {
+          "id": 10,
+          "image": "waterBottle",
+          "title": "MINERAL WATER",
+          "category": "Drinks"
+        },
+        {
+          "id": 11,
+          "image": "thumsUp",
+          "title": "THUMBS UP",
+          "category": "Drinks"
+        }
+      ],
+
+      "team": [
+        {
+          "id": 1,
+          "image": "team1",
+          "name": "JOHNATHAN TYLER",
+          "designation": "Founder & Head Chef"
+        },
+        {
+          "id": 2,
+          "image": "team2",
+          "name": "WADE WARREN",
+          "designation": "Sous Chef"
+        },
+        {
+          "id": 3,
+          "image": "team3",
+          "name": "JHON DOE",
+          "designation": "Fast Food Chef"
+        },
+        {
+          "id": 4,
+          "image": "team4",
+          "name": "ALEX COAL",
+          "designation": "Senior Chef"
+        }
+      ]
+    }
+  ]
+}
