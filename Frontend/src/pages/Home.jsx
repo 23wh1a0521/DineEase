@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection";
 import Qualities from "../components/Qualities";
-import WhoAreWe from "../components/WhoAreWe";
 import Menu from "../components/Menu";
 import Team from "../components/Team";
+
 
 const Home = () => {
   // Check if user is authenticated
@@ -14,8 +14,6 @@ const Home = () => {
     <>
       <HeroSection />
       <Qualities />
-      <WhoAreWe />
-      <Menu />
       <Team />
 
       {/* Conditional CTA Section */}

@@ -19,13 +19,13 @@ const Register = () => {
         { name, email, password },
         { 
           headers: { "Content-Type": "application/json" },
-          withCredentials: true // Important for sending/receiving cookies
+          withCredentials: true 
         }
       );
       toast.success(data.message);
       setName(""); setEmail(""); setPassword("");
       sessionStorage.setItem("registrationSuccess", "true");
-      navigate("/success"); // Redirect user after successful registration
+      navigate("/success"); 
     } catch (error) {
       toast.error(error.response?.data?.message || "Registration failed");
     } finally {
@@ -34,16 +34,24 @@ const Register = () => {
   };
 
   return (
-    <section className="register-section">
-      <form onSubmit={handleRegister}>
+    <section className="register-container">
+      <div className="register-card">
         <h2>DineEase - Register</h2>
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit" disabled={loading}>
-          {loading ? "Joining..." : "Join Now"}
-        </button>
-      </form>
+        <form onSubmit={handleRegister}>
+          <div className="input-group">
+            <input type="text" placeholder="Full Name" value={name} onChange={(e) => setName(e.target.value)} required />
+          </div>
+          <div className="input-group">
+            <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </div>
+          <div className="input-group">
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          </div>
+          <button type="submit" className="join-btn" disabled={loading}>
+            {loading ? "Joining..." : "Join Now"}
+          </button>
+        </form>
+      </div>
     </section>
   );
 };

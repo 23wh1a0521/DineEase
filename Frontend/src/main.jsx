@@ -1,10 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+// main.jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import axios from 'axios'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+// --- ADD THIS HERE ---
+axios.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token && token !== "undefined") {
+    // Attach the token to the Authorization header
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+}, (error) => {
+  return Promise.reject(error);
+});
+// ----------------------
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
+  </React.StrictMode>,
 )

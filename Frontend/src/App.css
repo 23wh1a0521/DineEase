@@ -44,6 +44,48 @@ body {
 
 .nav-links a:hover {
   color: #ff6b4a;
+}/* Container for the whole navbar */
+nav {
+  display: flex;
+  justify-content: space-between; /* Pushes Logo to left, Links to right */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* The logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Container for the Links */
+.links {
+  display: flex;
+  gap: 20px; /* This creates the space between Home, Menu, etc. */
+  align-items: center;
+}
+
+/* Individual Link styling */
+.links a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #fb607f; /* Matches your login link color */
+}
+
+/* Logout Button styling */
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #fb607f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .menu-btn {
@@ -306,4 +348,429 @@ body {
   font-size: 14px;
   color: #ff6b4a;
   font-weight: 500;
+}
+/* ================= REGISTER SECTION ================= */
+
+.register-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.register-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.register-card h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #ff6b4a; /* Matches your theme orange */
+}
+
+.join-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.join-btn:hover {
+  background: #ff6b4a;
+}
+
+.join-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+/* ================= LOGIN SECTION ================= */
+
+.login-container {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px; /* Slightly narrower than register for a clean look */
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #111;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background: #ff6b4a; /* Brand Orange */
+  transform: translateY(-2px);
+}
+
+.login-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.redirect-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.redirect-text a {
+  color: #ff6b4a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
+}
+/* ================= RESERVATION SECTION ================= */
+
+.reservation-page {
+  padding: 80px 60px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.reservation-container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.reservation-container h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.reservation-card {
+  background: #fff;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+/* Targeting the form elements inside the Reservation component */
+.reservation-card form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 20px;
+}
+
+.reservation-card input {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: 1px solid #eee;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.reservation-card input:focus {
+  border-color: #ff6b4a;
+}
+
+/* Making Date, Time, and Button span full width or center */
+.reservation-card input[type="date"],
+.reservation-card input[type="time"],
+.reservation-card button {
+  grid-column: span 2;
+}
+
+.reservation-card button {
+  background: #111;
+  color: #fff;
+  padding: 18px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.reservation-card button:hover {
+  background: #ff6b4a;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .reservation-card form {
+    grid-template-columns: 1fr;
+  }
+  
+  .reservation-card input[type="date"],
+  .reservation-card input[type="time"],
+  .reservation-card button {
+    grid-column: span 1;
+  }
+
+  .reservation-container h2 {
+    font-size: 32px;
+  }
+}
+.order-container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.order-container h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* The Card holding the items */
+.order-card {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-of-type {
+  border-bottom: none;
+}
+
+.item-info h4 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.item-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Quantity controls to match Menu style */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f8f8f8;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+.qty-controls button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ff6b4a; /* Theme Orange */
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.qty-controls span {
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Total Section */
+.order-summary {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.order-summary span {
+  color: #2d9d78; /* Success Green for price */
+  font-weight: 700;
+}
+
+.confirm-btn {
+  width: 100%;
+  margin-top: 30px;
+  padding: 18px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: #ff6b4a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 107, 74, 0.2);
+}
+
+.confirm-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.status-badge {
+  background: #fff4e5;
+  color: #ff9800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.user-greeting {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff6b4a; /* Matches your brand orange theme */
+  margin-right: 15px;
+  text-transform: capitalize;
+}
+/* Container for the buttons */
+.button_group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+/* Styling the Category Badge (The one on the left) */
+.category_label_btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #fb7185;
+  background: white;
+  color: #fb7185;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: default; /* Shows it is not clickable */
+  pointer-events: none; /* Prevents clicking */
+}
+
+/* Styling the Order Now Action (The one on the right) */
+.order_now_btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #111; /* Dark professional look */
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order_now_btn:hover {
+  background: #ff6b4a; /* Turns theme orange on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 74, 0.3);
+}
+.filter_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter_btn, .active_btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #fb7185;
+  cursor: pointer;
+  background: white;
+  transition: 0.3s;
+}
+
+.active_btn {
+  background: #fb7185;
+  color: white;
+}
+
+.category_label {
+  font-size: 12px;
+  color: #fb7185;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
 }

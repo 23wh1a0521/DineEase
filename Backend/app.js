@@ -3,6 +3,7 @@ import cors from "cors";
 import { errorMiddleware } from "./error/error.js";
 import userRouter from "./routes/userRoute.js";
 import reservationRoute from "./routes/reservationRoute.js"
+import orderRoute from "./routes/orderRoute.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 // Correct your routes - remove the duplicate line 21
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/reservation", reservationRoute);
+app.use("/api/v1/order", orderRoute);
 
 // ✅ POST METHOD
 app.post("/api/test", (req, res) => {

@@ -10,17 +10,12 @@ import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
 import MenuPage from "./pages/Menu";
 import ReservationPage from "./pages/Reservation";
-
+import Order from "./pages/Order";
+import MyOrders from "./pages/MyOrders";
 
 /* Components */
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Qualities from "./components/Qualities";
-import Menu from "./components/Menu";
-import Team from "./components/Team";
 import Reservation from "./components/Reservation";
-import About from "./components/About";
-import WhoAreWe from "./components/WhoAreWe";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
@@ -33,19 +28,30 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        {/* Home Page */}
-        {/* Replace the existing Home Page Route block in App.jsx */}
         <Route path="/" element={<Home />} />
-
-        {/* Pages */}
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />}/>
-        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/menu" element={<MenuPage />} />
-        <Route path="/reservation" element={<ReservationPage />} />
 
+        {/* Only keep the Protected versions */}
+        <Route 
+          path="/reservation" 
+          element={
+            <ProtectedRoute>
+              <ReservationPage />
+            </ProtectedRoute>
+          } 
+        />
 
-        {/* Protected Success Page */}
+        <Route 
+          path="/order" 
+          element={
+            <ProtectedRoute>
+              <Order />
+            </ProtectedRoute>
+          } 
+        /><Route path="/myorders" element={<MyOrders />} />
+
         <Route
           path="/success"
           element={
@@ -54,15 +60,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route 
-          path="/reservation" 
-          element={
-            <ProtectedRoute>
-            <Reservation />
-            </ProtectedRoute>
-          } 
-        />
-        {/* 404 */}
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

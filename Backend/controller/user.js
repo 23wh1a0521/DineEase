@@ -21,6 +21,7 @@ export const register = async (req, res, next) => {
 };
 
 // LOGIN
+// LOGIN
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
@@ -34,7 +35,20 @@ export const login = async (req, res, next) => {
     const isPasswordMatched = await bcrypt.compare(password, user.password);
     if (!isPasswordMatched) return next(new ErrorHandler("Invalid email or password!", 401));
 
-    res.status(200).json({ success: true, message: `Welcome back, ${user.name}!` });
+    // --- ADD THIS PART ---
+    const token = user.getJWTToken(); // Assuming this method exists in your userSchema.js
+
+    res.status(200).json({ 
+      success: true, 
+      message: `Welcome back, ${user.name}!`,
+      user: {
+      name: user.name, // Send the name back to frontend
+      email: user.email
+    },
+      token // Sending the token to the frontend
+    });
+    // ---------------------
+    
   } catch (error) {
     next(error);
   }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import foodBowlImg from "../assets/foodbowl.png";
 const Success = () => {
   const [count, setCount] = useState(10);
   const navigate = useNavigate();
@@ -37,9 +37,9 @@ const Success = () => {
       style={{ textAlign: "center", marginTop: "100px" }}
     >
       <img
-        src="/success-icon.png"
+        src={foodBowlImg}
         alt="success"
-        style={{ width: "100px" }}
+        style={{ width: "500px" }}
       />
 
       <h1>Registration Successful!</h1>

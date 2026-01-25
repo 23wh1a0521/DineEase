@@ -16,8 +16,20 @@
         },
         {
           "id": 3,
-          "image": "fastDelivery",
-          "title": "FAST DELIVERY",
+          "image": "ambience",
+          "title": "GOOD AMBIENCE",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "id": 4,
+          "image": "staff",
+          "title": "FRIENDLY STAFF",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        },
+        {
+          "id": 5,
+          "image": "service",
+          "title": "GOOD SERVICE",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
         }
       ],
@@ -27,69 +39,80 @@
           "id": 1,
           "image": "breakfast1",
           "title": "UPMA",
-          "category": "Breakfast"
+          "category": "Breakfast",
+          "price": 50
         },
         {
           "id": 2,
           "image": "breakfast2",
           "title": "DOSA",
-          "category": "Breakfast"
+          "category": "Breakfast",
+          "price": 60
         },
         {
           "id": 3,
           "image": "breakfast3",
           "title": "IDLY VADA",
-          "category": "Breakfast"
+          "category": "Breakfast",
+          "price": 60
         },
         {
           "id": 4,
           "image": "breakfast4",
           "title": "PURI",
-          "category": "Breakfast"
+          "category": "Breakfast",
+          "price": 60
         },
 
         {
           "id": 5,
           "image": "lunch1",
           "title": "VEG MEAL",
-          "category": "Lunch"
+          "category": "Lunch",
+          "price": 90
         },
         {
           "id": 6,
           "image": "lunch2",
           "title": "VEG FRIED RICE",
-          "category": "Lunch"
+          "category": "Lunch",
+          "price": 110
         },
         {
           "id": 7,
           "image": "lunch3",
           "title": "CURD RICE",
-          "category": "Lunch"
+          "category": "Lunch",
+          "price": 70
         },
         {
           "id": 8,
           "image": "lunch4",
           "title": "CHAPATHI KURMA",
-          "category": "Lunch"
+          "category": "Lunch",
+          "price": 100
         },
 
         {
           "id": 9,
           "image": "ChocolateMilkshake",
           "title": "CHOCOLATE MILKSHAKE",
-          "category": "Drinks"
+          "category": "Drinks",
+          "price": 70
         },
         {
           "id": 10,
           "image": "waterBottle",
           "title": "MINERAL WATER",
-          "category": "Drinks"
+          "category": "Drinks",
+          "price": 40
         },
         {
           "id": 11,
           "image": "thumsUp",
           "title": "THUMBS UP",
-          "category": "Drinks"
+          "category": "Drinks",
+          "price": 30
         }
       ],
 

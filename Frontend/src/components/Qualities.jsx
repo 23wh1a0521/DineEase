@@ -7,7 +7,7 @@ const Qualities = () => {
 
   return (
     <section className="qualities">
-      <h2>Our Qualities</h2>
+      <h2><center>Our Qualities</center></h2>
 
       <div className="qualities-grid">
         {qualities.map((item) => (
@@ -16,8 +16,6 @@ const Qualities = () => {
               src={images[item.image]}
               alt={item.title}
             />
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
           </div>
         ))}
       </div>

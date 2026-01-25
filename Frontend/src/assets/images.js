@@ -14,10 +14,12 @@ import lunch4 from "./lunch4.jpg";
 import waterBottle from "./waterbottle.jpg";
 import thumsUp from "./thumsup.jpg";
 import ChocolateMilkshake from "./chocolatemilkshake.jpg";
-
-import qualityFood from "./quality_food.svg";
-import superTaste from "./super_taste.svg";
-import fastDelivery from "./fast_delivery.svg";
+import foodBowl from "./foodbowl.png";
+import ambience from "./ambience.png";
+import service from "./service.png";
+import staff from "./staff.png";
+import qualityFood from "./quality_food.png";
+import superTaste from "./super_taste.png";
 
 export const images = {
   team1,
@@ -35,7 +37,10 @@ export const images = {
   waterBottle,
   thumsUp,
   ChocolateMilkshake,
-  qualityFood,
-  superTaste,
-  fastDelivery,
+  foodBowl,
+  qualityFood,   // This is the .png
+  superTaste,    // This is the .png
+  ambience,
+  service,
+  staff,
 };
