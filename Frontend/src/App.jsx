@@ -1,4 +1,4 @@
-import "./App.css"; // This line MUST be present
+import "./App.css"; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
@@ -33,7 +33,6 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/menu" element={<MenuPage />} />
 
-        {/* Only keep the Protected versions */}
         <Route 
           path="/reservation" 
           element={

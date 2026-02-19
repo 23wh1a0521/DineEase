@@ -9,10 +9,10 @@ const Menu = () => {
   const [filter, setFilter] = useState("All");
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   
-  // 1. Get dishes from JSON safely
+  //  Get dishes from JSON safely
   const dishes = api.data[0].dishes;
 
-  // 2. Get unique categories for the filter buttons
+  //  Get unique categories for the filter buttons
   const categories = ["All", ...new Set(dishes.map((dish) => dish.category))];
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const Menu = () => {
     toast.success(`${dish.title} added!`);
   };
 
-  // 3. Filter the dishes based on selected category
+  //  Filter the dishes based on selected category
   const filteredDishes = filter === "All" 
     ? dishes 
     : dishes.filter(dish => dish.category.toLowerCase() === filter.toLowerCase());
@@ -63,7 +63,7 @@ const Menu = () => {
         <div className="heading_section">
           <h1 className="heading">POPULAR DISHES</h1>
           
-          {/* 4. Category Filter Buttons */}
+          {/*  Category Filter Buttons */}
           <div className="filter_buttons">
             {categories.map((cat, index) => (
               <button 

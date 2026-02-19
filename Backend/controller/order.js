@@ -1,4 +1,4 @@
-import { Order } from "../models/orderSchema.js"; // Ensure path is correct
+import { Order } from "../models/orderSchema.js"; 
 
 export const placeOrderController = async (req, res) => {
   try {
@@ -10,10 +10,9 @@ export const placeOrderController = async (req, res) => {
 
     // Create new order in MongoDB
     const newOrder = await Order.create({
-      user: req.user._id, // Assuming you have auth middleware
+      user: req.user._id, 
       items,
       totalAmount,
-      status: "Pending"
     });
 
     res.status(201).json({
@@ -29,7 +28,7 @@ export const placeOrderController = async (req, res) => {
     });
   }
 };
-// Backend/controller/order.js
+
 export const getMyOrders = async (req, res, next) => {
   try {
     // req.user.id comes from your fixed isAuthenticated middleware

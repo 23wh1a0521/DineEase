@@ -7,7 +7,7 @@ import orderRoute from "./routes/orderRoute.js";
 
 const app = express();
 
-// Hardcode the origin temporarily to ensure it works
+
 app.use(
   cors({
     origin: ["http://localhost:5173"], 
@@ -19,12 +19,12 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Correct your routes - remove the duplicate line 21
+
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/reservation", reservationRoute);
 app.use("/api/v1/order", orderRoute);
 
-// ✅ POST METHOD
+// POST METHOD
 app.post("/api/test", (req, res) => {
     const { name, email } = req.body;
 

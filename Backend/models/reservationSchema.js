@@ -35,5 +35,5 @@ const reservationSchema = new mongoose.Schema({
   },
 });
 
-// Exporting the model so it can be used in controllers
+
 export const Reservation = mongoose.model("Reservation", reservationSchema);

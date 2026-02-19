@@ -102,7 +102,7 @@ nav {
   background: #111;
   color: #fff;
 }
-/* Add this to App.css to fix the Menu/Qualities/Team alignment */
+/* to fix the Menu/Qualities/Team alignment */
 .dishes_container, .qualities-grid, .team_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Creates neat rows/columns */

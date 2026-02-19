@@ -3,7 +3,6 @@ import data from "../restApi.json";
 import { images } from "../assets/images";
 
 const Team = () => {
-  // Access the team array from the JSON structure
   const teamData = data.data[0].team;
 
   return (

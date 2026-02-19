@@ -77,15 +77,13 @@ const Order = () => {
         setCartItems([]);
         localStorage.removeItem("cart"); // Clear storage on success
         window.dispatchEvent(new Event("storage"));
-        navigate("/success");
       }
     } catch (error) {
-      // Axios interceptor will handle 401 redirects
       toast.error(error.response?.data?.message || "Order placement failed");
     }
   };
 
-  // The fixed Return statement with correct styling classes
+ 
   return (
     <div className="order-container">
       <h2>Review Your Order</h2>

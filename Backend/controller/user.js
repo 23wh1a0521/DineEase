@@ -21,7 +21,6 @@ export const register = async (req, res, next) => {
 };
 
 // LOGIN
-// LOGIN
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
@@ -35,8 +34,7 @@ export const login = async (req, res, next) => {
     const isPasswordMatched = await bcrypt.compare(password, user.password);
     if (!isPasswordMatched) return next(new ErrorHandler("Invalid email or password!", 401));
 
-    // --- ADD THIS PART ---
-    const token = user.getJWTToken(); // Assuming this method exists in your userSchema.js
+    const token = user.getJWTToken(); 
 
     res.status(200).json({ 
       success: true, 

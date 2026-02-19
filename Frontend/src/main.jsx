@@ -1,10 +1,10 @@
-// main.jsx
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import axios from 'axios'
 
-// --- ADD THIS HERE ---
+
 axios.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token && token !== "undefined") {
@@ -15,7 +15,7 @@ axios.interceptors.request.use((config) => {
 }, (error) => {
   return Promise.reject(error);
 });
-// ----------------------
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

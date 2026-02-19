@@ -17,9 +17,8 @@ const Reservation = () => {
   e.preventDefault();
 
   try {
-    // Change this line in your Reservation.jsx component
     const { data } = await axios.post(
-      "http://localhost:4000/api/v1/reservation/send", // Added /v1 and /send
+      "http://localhost:4000/api/v1/reservation/send", 
       { firstName, lastName, email, phone, date, time },
       { headers: { "Content-Type": "application/json" } }
     );
