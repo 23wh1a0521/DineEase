@@ -25,7 +25,7 @@ app.use("/api/v1/reservation", reservationRoute);
 app.use("/api/v1/order", orderRoute);
 
 // POST METHOD
-app.post("/api/test", (req, res) => {
+/*app.post("/api/test", (req, res) => {
     const { name, email } = req.body;
 
     res.status(200).json({
@@ -37,6 +37,7 @@ app.post("/api/test", (req, res) => {
         },
     });
 });
+*/
 
 app.use(errorMiddleware);
 
